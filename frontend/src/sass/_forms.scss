@@ -1,0 +1,111 @@
+// Typeahead Select field drop down
+.rbt-menu.dropdown-menu[style] {
+  max-height: 175px !important;
+}
+
+.typeahead-error {
+  border: 1px solid red;
+  border-radius: 0.25rem;
+}
+
+.error {
+  color: red;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.help-block {
+  color: #6c757d;
+  font-size: 0.8rem;
+}
+
+.form-label {
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+}
+
+.title {
+  background-color:#727272;
+  color: #fff;
+  padding: 0 .8rem;
+  width: 100%;
+
+  &.top {
+    border-radius: 10px 10px 0 0;
+    padding-top: 0.25rem;
+  }
+}
+
+.form-check-label {
+  font-size: 0.9rem;
+}
+
+.form-control:disabled {
+  background-color: #ffffff;
+  opacity: 1;
+  border-radius: 0;
+  border: 1px solid transparent;
+}
+
+.form-control-wrapper {
+  padding: 0.25rem 0.5rem;
+}
+
+.form-control {
+  background-color:#f0f8ff !important;
+}
+
+.read-only {
+  background-color:#f0f8ff !important;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+}
+
+.rbt-menu {
+  font-size: 0.9rem;
+}
+
+.login {
+  display: flex;
+  color: #FFF;
+
+  .form-control {
+    background-color: #212529 !important;
+    border-color: #c2c2c2 !important;
+    color: #FFF !important;
+  }
+}
+
+.logout-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.5rem 0;
+
+  .user-name {
+    font-size: 0.875rem;
+  }
+}
+
+.suggestions-list {
+  max-height: 200px; /* Adjust based on your preference */
+  overflow-y: auto; /* Enables vertical scrolling */
+  width: 100%; /* Ensure the list matches the width of the input field */
+  position: absolute; /* Position the list just below the input field */
+  background-color: white; /* Background color for the list */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Optional: adds a shadow for depth */
+  border: 1px solid #ddd; /* Optional: adds a border around the list */
+  z-index: 1000; /* Ensure the list is above other content */
+}
+
+.suggestions-list li {
+  padding: 10px; /* Padding for each suggestion for better readability */
+  cursor: pointer; /* Changes the cursor to indicate clickable items */
+  list-style-type: none; /* Removes the default list item styling */
+}
+
+.suggestions-list li:hover {
+  background-color: #f0f0f0; /* Background color change on hover */
+}
+
+
