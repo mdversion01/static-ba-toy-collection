@@ -18,9 +18,10 @@ const Filters = ({ filterOptions, selectedFilters, setSelectedFilters, toys }) =
 
 
   return (
-    <div className="filter-section">
+    <>
+    <div className="filter-section container-fluid">
         <div className="row">
-          <div className="col">
+          <div className="col-md-2 col-sm-12">
             <Form.Select
               size="sm"
               aria-label="Companies"
@@ -35,7 +36,7 @@ const Filters = ({ filterOptions, selectedFilters, setSelectedFilters, toys }) =
               ))}
             </Form.Select>
           </div>
-          <div className="col">
+          <div className="col-md-2 col-sm-12">
             <Form.Select
               size="sm"
               aria-label="Brands" value={selectedFilters.brand}
@@ -51,7 +52,7 @@ const Filters = ({ filterOptions, selectedFilters, setSelectedFilters, toys }) =
                 ))}
             </Form.Select>
           </div>
-          <div className="col">
+          <div className="col-md-2 col-sm-12">
             <Form.Select
               size="sm"
               aria-label="Series"
@@ -80,7 +81,7 @@ const Filters = ({ filterOptions, selectedFilters, setSelectedFilters, toys }) =
                 ))}
             </Form.Select>
           </div>
-          <div className="col">
+          <div className="col-md-2 col-sm-12">
             <Form.Select
               size="sm"
               aria-label="Collections"
@@ -110,7 +111,7 @@ const Filters = ({ filterOptions, selectedFilters, setSelectedFilters, toys }) =
                 ))}
             </Form.Select>
           </div>
-          <div className="col">
+          <div className="col-md-2 col-sm-12">
             <button
               className="btn btn-primary btn-sm"
               onClick={() => {
@@ -129,6 +130,15 @@ const Filters = ({ filterOptions, selectedFilters, setSelectedFilters, toys }) =
           </div>
         </div>
       </div>
+      <div className="thumb-info container-fluid">
+      <div className="d-flex"> 
+        <div className="pe-5"><em>Click on a thumbnail to view information about the toy.</em></div>
+        <div className="d-flex pe-5"><span className="multiple-items">2</span>&nbsp; - if more than one owned.</div>
+        <div className="d-flex pe-5"><span className="new-item"><i className="fa fa-check" aria-hidden="true"></i></span>&nbsp; - newly added toy.</div>
+        <div className="pe-5">Toys with the 'Variant' banner means there is more than one version of the toy.</div>
+        </div>
+      </div>
+      </>
   );
 };
 
