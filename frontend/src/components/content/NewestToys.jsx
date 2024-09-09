@@ -1,7 +1,6 @@
 // src/components/NewestToys.jsx
 import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { endpoints } from "../../endpoints/Endpoints";
+import toysData from "../../json/toys.json";
 import Thumb from "./Thumb";
 
 const NewestToys = () => {
@@ -9,10 +8,9 @@ const NewestToys = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchNewToys = async () => {
+    const fetchNewToys = () => {
       try {
-        const response = await axios.get(endpoints.API_URL + "toys");
-        const toys = response.data;
+        const toys = toysData;
         const thirtyDaysAgo = new Date();
         thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
 
@@ -44,12 +42,13 @@ const NewestToys = () => {
 
   return (
     <>
-    <h2>Newly Added Toys</h2>
-    <div className="new-toys">
-      {newToys.map((toy) => (
-        <Thumb key={toy.id} toy={toy} />
-      ))}
-    </div>
+      <h2>Newly Added Toys</h2>
+      <div className="new-toys">
+        {newToys.map((toy) => (
+          <Thumb key={toy.id} toy={toy} />
+        ))}
+      </div>
+
     </>
   );
 };

@@ -1,25 +1,18 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'; // Import Routes from 'react-router-dom' instead of Switch
 import Header from './components/header/Header';
 import Home from './pages/Home';
 import ToyList from './pages/ToyList';
 import ToysByCompany from './pages/ToysByCompany';
 import Registration from './pages/Registration';
-import { endpoints } from "./endpoints/Endpoints";
+import toysData from "./json/toys.json"; // Import the local JSON file
 
 const App = () => {
   const [toys, setToys] = useState([]);
 
   useEffect(() => {
-    axios.get(endpoints.API_URL + 'toys/')
-      .then((response) => {
-        setToys(response.data);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
+  // Fetch data from the local JSON file
+    setToys(toysData);
   }, []);
 
   return (
