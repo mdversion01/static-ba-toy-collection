@@ -73,7 +73,7 @@ const ModalAddContent = ({ buttonText }) => {
 
   return (
     <>
-      <Button variant="link" className="nav-link" onClick={handleShow}>
+      <Button variant="link" className="nav-link add-btn" onClick={handleShow}>
         {buttonText}
       </Button>
 
