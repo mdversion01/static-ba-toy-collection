@@ -55,14 +55,14 @@ const ThumbModal = ({ toy, show, handleModalClose }) => {
                   </div>
                 </div>
               </div>
-              <div className="row g-0">
+              {/* <div className="row g-0">
                 <div className="col">
                   <div className="form-group">
                     <label className="title form-label">Current Image Path</label>
                     <div className="form-control form-control-sm">{toy.src}</div>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <div className="row g-0">
                 <div className="col">
                   <div className="form-group">
